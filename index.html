@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <img src="img/img2.jpg" class="img2" alt="Header Image">
+        <div class="con">
+            <nav>
+                <img src="img/logo.png" class="logo" alt="Logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars"onclick="openmenu()"></i>
+            </nav>
+            <div class="header-txt">
+                <h1>Hi, I am <span>Niranjan Mali</span></h1>
+                <div class="txt-an">
+                    <span class="word"></span>
+                </div>
+                <h2 class="intro-para">
+                    A web enthusiast with a knack for creating user-friendly websites.<br>With a solid foundation in Java and web development, I love exploring new technologies and looking for ways to improve my skills. Let's build something amazing together!
+                </h2>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1"></div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a passionate and dedicated Web Developer and Java Developer with a strong foundation in computer engineering.With a love for coding and design, I strive to create intuitive and visually appealing websites that offer seamless user experiences. I enjoy tackling complex challenges and continuously expanding my skill set. My recent experiences, including an internship at CodSoft, have further fueled my enthusiasm for web development. Additionally, I pride myself on being an attentive listener, fast learner, and team player with strong communication skills, all of which enable me to contribute effectively to any team.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skill')">Skills</p>
+                        <p class="tab-links" onclick="opentab('exp')">Experience</p>
+                        <p class="tab-links" onclick="opentab('edu')">Education</p>
+                        <p class="tab-links" onclick="opentab('ach')">Achievement</p>
+                    </div>
+                    <div class="tab-cont active-tab" id="skill">
+                        <ul>
+                            <li>Web Development</li>
+                            <li>JavaScript</li>
+                            <li>Java Development</li>
+                            <li>C++ Programming</li>
+                            <li>Python Programming</li>
+                            <li>MySQL</li>
+                        </ul>
+                    </div>
+                    <div class="tab-cont" id="exp">
+                        <ul>
+                            <li>Web Developer Intern at CodSoft Company</li>
+                            <li>Worked As Executive Co-Lead in Technovate 2024 PCCOER</li>
+                            <li>Member for CodeCraft Student Chapter-1</li>
+                        </ul>
+                    </div>
+                    <div class="tab-cont" id="edu">
+                        <ul>
+                            <li>BE Computer 2026 Pimpri Chinchwad College of Engineering & Research Pune</li>
+                            <li>HSC 2021 Percentage: 83.17 R.N.C College of Arts Commerce and Science Nashik</li>
+                            <li>SSC 2019 Percentage: 86.80 St.Xavier's High School Nashik</li>
+                            <li>JEE: 87.23, CET: 95.387</li>
+                        </ul>
+                    </div>
+                    <div class="tab-cont" id="ach">
+                        <ul>
+                            <li>PBL Project Competition National level held at AISSMS college of Engineering Pune : RunnerUp</li>
+                            <li>PBL Project Competition Genesis held at JSPM College of Engineering Hadapsar Pune : RunnerUp</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <p class="project-title" data-target="desc1">News Brezza</p>
+                    <img src="img/work1.png" alt="Project 1">
+                    <div class="work-description" id="desc1">
+                        <p>News Brezza is a website that we hosted using Blogspot technologies. This website has an integrated Google translator which delivers users with 108 different languages options to read the news.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <p class="project-title" data-target="desc2">AI ChatBot</p>
+                    <img src="img/work2.png" alt="Project 2">
+                    <div class="work-description" id="desc2">
+                        <p>Integrate artificial intelligence to handle unfamiliar queries, expanding the chatbot’s capabilities. Develop the chatbot to seamlessly integrate with websites, messaging apps, and potentially voice interfaces, offering a consistent experience across various channels.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>niranjanmali960@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7758068130</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/niranjan-mali-497814259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/peanut_._05?igsh=MTVsNHBweWh1dm94Ng=="><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/niranjanm57"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="img/Niranjanscv.jpg" download class="btn btn1">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <div class="submit-btn-container">
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </div>
+                    </form>
+                    <span id="msg" style="display:none;">Your message has been sent successfully!</span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright <i class="fa-regular fa-copyright"> N i r a n j a n </i> </p>
+        </div>
+    </div>
+
+    <!-- Link the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

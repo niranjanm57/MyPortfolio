@@ -1,0 +1,605 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{scroll-behavior: smooth;}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* General button style */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-transform: uppercase; /* Capitalize text */
+}
+
+/* Primary button style (e.g., for Download CV) */
+.btn.btn1 {
+    background: linear-gradient(45deg, #32afed, #148dca);
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn.btn1:hover,
+.btn.btn1:focus {
+    background: linear-gradient(45deg, #148dca, #32afed);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Secondary button style (e.g., for Submit) */
+.btn.btn2 {
+    background: linear-gradient(45deg, #32afed, #148dca); /* Same gradient as btn1 */
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn.btn2:hover,
+.btn.btn2:focus {
+    background: linear-gradient(45deg, #148dca, #32afed); /* Same gradient as btn1 */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Social Media Icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #148dca; /* Default color for icons */
+    font-size: 50px;
+    margin-right: 15px;
+    display: inline-block;
+    transition: transform 0.5s ; /* Transition for color and transform */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.contact-left i:hover {
+    color: #148dca; /* Change color on hover */
+    transform: translateY(-5px); /* Slightly move up on hover */
+}
+
+/* Other styles */
+.header {
+    left: 10px;
+    position: relative;
+    text-align: center;
+    max-width: 100%;
+    padding: 0px;
+}
+
+.img2 {
+    width: 500px;
+    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    object-fit: contain;
+}
+
+.con {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav img.logo {
+    width: 200px;
+    height: auto;
+    margin-right: 90px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    position: relative;
+    padding: 0 0 5px 0;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #32afed;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-txt {
+    right: 200px;
+    position: absolute;
+    left: 0%; /* Move content further left */
+    top: 45%;
+    transform: translateY(-50%);
+    margin-left: 0; /* Remove additional margin */
+}
+.header-txt span {
+    color: #32afed;
+    font-size: inherit;
+   
+}
+
+.txt-an {
+    font-size: 50px;
+    font-weight: 600;
+    min-width: 300px;
+    position: relative;
+    text-align: left;
+    left: 10%;
+}
+
+.txt-an span {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* About Section */
+#about {
+    padding: 200px 0;
+    padding-left: 30px;
+    color: #000;
+    font-size: 24px;
+}
+
+.sub-title {
+    font-size: 50px;
+    font-weight: 600;
+    color: #32afed;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #32afed;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.3s;
+}
+
+.tab-links.active-link::after {
+    width: 100%;
+}
+
+.tab-cont ul li {
+    padding-left: 20px;
+    list-style: disc;
+    margin: 10px 0;
+    color: #148dca;
+    font-size: 20px;
+}
+
+.tab-cont {
+    display: none;
+}
+
+.tab-cont.active-tab {
+    display: block;
+}
+
+#portfolio {
+    padding: 50px 0;
+    padding-left: 30px;
+    color: #000;
+}
+
+.work-list {
+    display: flex;
+    justify-content: space-between; /* Adjust space between work items */
+    align-items: flex-start;
+    flex-wrap: wrap; /* Wrap items to the next line if needed */
+    margin-top: 30px;
+}
+
+.work {
+    width: calc(50% - 20px); /* Adjust width to fit in container */
+    margin: 10px; /* Space between items */
+    overflow: hidden; /* Hide overflow content */
+}
+
+.work img {
+    width: 100%; /* Adjusts width to fill the container */
+    max-height: 400px; /* Adjust this value to control the maximum height */
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+}
+
+.work-info {
+    text-align: center; /* Center align text */
+}
+
+/* Ensure default styling for project titles and descriptions */
+/* Default styling for project titles */
+.project-title {
+    font-size: 22px;
+    cursor: pointer;
+    color: #000; /* Default color */
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 5px; /* Space for the underline */
+    transition: color 0.3s ease;
+}
+
+/* Underline effect */
+.project-title::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #32afed; /* Underline color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+/* Active state styling for project titles */
+.project-title.active::after {
+    width: 100%; /* Full width underline */
+}
+
+/* Show the underline on hover */
+.project-title:hover::after {
+    width: 100%; /* Full width underline on hover */
+}
+
+/* Default styling for work descriptions */
+.work-description {
+    display: none; /* Hidden by default */
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+}
+
+/* Active state styling for work descriptions */
+.work-description.active {
+    display: block; /* Show when active */
+}
+#contact {
+    padding: 90px 0;}
+.contact-left {
+    flex-basis: 35%;
+    padding-left: 30px;
+}
+
+.contact-right {
+    flex-basis: 60%;
+    text-align: center; /* Center align contents of contact-right */
+}
+
+.contact-left p {
+    margin-top: 20px;
+}
+
+.contact-left i {
+    color: #000000;
+    margin-right: 25px;
+    font-size: 30px;
+}
+
+.contact-right form {
+    width: 100%;
+    text-align: center; /* Center align form elements */
+}
+
+form input, form textarea {
+    width: 96%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 10px;
+    margin: 10px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+/* Center the submit button at the bottom */
+.submit-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding-bottom: 10%; /* Adjust as needed */
+}
+
+.btn.btn2 {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-transform: uppercase; /* Capitalize text */
+}
+form .btn3{
+
+    padding: 14px 60px;
+    
+    font-size: 18px;
+    
+    margin-top: 20px;
+    
+    cursor: pointer;
+    
+    }
+    
+    .copyright{
+        top: -20px;
+    width: 100%;
+    rtext-align: center;
+    padding: 30px 0;
+   background-color: #148dca;
+    
+    }
+    
+    .header-txt h2 {
+        padding: 2px 0;
+        padding-left: 30px;
+        position: absolute;
+        right: 200px;
+        left: 0;
+        font-size: 24px; /* Match the font size to the About section */
+        color: #000;
+        margin-left: 5%;
+        text-align: left;
+        margin-top: 20px;
+        
+        margin-left: 0;
+        font-weight: 10%;/* Adjust width if needed */
+    }
+   
+    .header-txt h1 {
+        margin-left: 5%;
+        text-align: left;
+        left: 10%;
+        font-size: 50px; /* Keep the current font size */
+        margin-bottom: 0;
+    }
+
+nav .fa-solid{
+    display: none;
+}
+    /*css for small screen*/
+
+/* Responsive Styles (for Mobile and Smaller Screens) */
+@media only screen and (max-width: 786px) {
+    .header {
+        text-align: center;
+        padding: 100px;
+        
+    }
+    .txt-an {
+        font-size: 36px; /* Font size for smaller screens */
+    }
+
+
+    .img2 { 
+        right: 50px;
+        top: 20px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        margin-top: -20px;
+    }
+  
+   
+
+    .con {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav img.logo {
+        width: 120px;
+        margin-bottom: 100px;
+    
+        position: absolute; /* Allows positioning */
+        top: 10px; /* Adjust as needed to position vertically */
+        left: 10px; /
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .header-txt {
+        font-size: 30px;
+        padding-top: 90px;
+        position: -ms-page;
+        margin-top: 0;
+        width: 100%;
+    }
+    
+
+    .header-txt h1 {
+        padding-top: -10px;
+        font-size: 40px;
+       
+    }
+    .header-txt h1 span {
+        padding-right:10% ;
+        display: block; /* Forces line break on mobile screens */
+        text-align: center; /* Center-align text on mobile, if desired */
+    }
+
+    .header-txt h2 {
+        font-size: 18px; /* Smaller font size for mobile */
+        text-align: left; /* Center align text on mobile */
+        margin-left: 0; /* Remove left margin on mobile */
+        padding-left: 0; /* Remove left padding on mobile */
+        margin-top: 10px; /* Adjust top margin for mobile */
+        width: 100%; /* Ensure the width is full */
+        box-sizing: border-box;
+    }
+
+    #about {
+        padding: 250px 10px;
+        font-size: 18px;
+    }
+
+    .tab-titles {
+        flex-direction: column;
+    }
+
+    .tab-links {
+        margin: 10px 0;
+    }
+
+    #portfolio {
+    margin-top: -150px;
+    padding: 0 10px;
+    }
+
+    .work-list {
+        flex-direction: column;
+    }
+
+    .work {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .work img {
+        max-height: 300px;
+    }
+   
+    #contact {
+        padding: 20px;
+    }
+
+    .contact-left, .contact-right {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .contact-left .sub-title {
+        text-align: left;
+        padding-left: 0; /* Adjust padding if needed */
+    }
+
+    .contact-left p, .contact-right form {
+        margin: 10px 0;
+    }
+
+    .contact-right form {
+        width: 100%;
+    }
+
+    form input, form textarea {
+        width: calc(100% - 20px);
+        font-size: 16px;
+    }
+
+    .copyright {
+        text-align: center;
+        padding: 10px;
+        background-color: #148dca;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+        position: absolute;
+    top: 30px;
+    right: 30px; /* Move the icon to the left corner */
+    cursor: pointer;
+       
+    }
+    nav ul{
+        background: #76c8f2;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 180px;
+        height: 40vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 15px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 20px;
+        cursor: pointer;
+    }
+}
+#msg{
+    color: #000;
+    margin-top: -120px;
+    display: block;
+    margin-bottom: 40px;
+}
